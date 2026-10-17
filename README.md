@@ -113,13 +113,11 @@ npm run dev
 
 ## ☁️ AWS Cloud Deployment
 
-This project is configured for seamless deployment on **Amazon Web Services (AWS)**:
+This project is configured for deployment on **Amazon Web Services (AWS)**:
 
 - **EC2 + Docker Compose**: Launch an Ubuntu EC2 instance, clone the repository, and run `docker compose up -d`.
 - **Managed Containers**: Deploy container images via **Amazon ECR** to **AWS App Runner** or **ECS Fargate**.
 - **Static Hosting**: Deploy frontend to **AWS Amplify** or **Amazon S3 + CloudFront**.
-
-See the step-by-step instructions in [AWS_DEPLOYMENT_GUIDE.md](AWS_DEPLOYMENT_GUIDE.md).
 
 ---
 
