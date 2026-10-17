@@ -1,6 +1,6 @@
 # 🥑 FreshGuard — AI Food Freshness & Quality Intelligence Platform
 
-[![Azure](https://img.shields.io/badge/Deploy-Azure%20Cloud-0089D6?style=for-the-badge&logo=microsoftazure&logoColor=white)](https://portal.azure.com)
+[![AWS](https://img.shields.io/badge/Deploy-AWS%20Cloud-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)](https://aws.amazon.com/)
 [![Docker](https://img.shields.io/badge/Container-Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
 [![FastAPI](https://img.shields.io/badge/Backend-FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
 [![React](https://img.shields.io/badge/Frontend-React%20%2B%20Vite-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/)
@@ -66,7 +66,7 @@ graph TD
 | **Backend** | FastAPI, Uvicorn, Python 3.11, Pydantic v2, PyJWT, Passlib |
 | **Computer Vision** | OpenCV (`cv2`), NumPy, Scikit-Image, PIL |
 | **Databases** | PostgreSQL 16 (Relational/Inventory) & MongoDB 7.0 (Telemetry) |
-| **DevOps & Cloud** | Docker, Docker Compose, Azure Static Web Apps, Azure App Services |
+| **DevOps & Cloud** | Docker, Docker Compose, AWS EC2, AWS App Runner / ECS, AWS Amplify |
 
 ---
 
@@ -111,20 +111,15 @@ npm run dev
 
 ---
 
-## ☁️ Azure Cloud Deployment
+## ☁️ AWS Cloud Deployment
 
-This project is pre-configured for automated deployment on **Microsoft Azure**:
+This project is configured for seamless deployment on **Amazon Web Services (AWS)**:
 
-### Option A: Azure Static Web Apps + App Service (Zero Server Config)
-1. **Frontend**: Deploy `/frontend` to **Azure Static Web Apps** with build preset `Vite` (`dist`).
-2. **Backend**: Deploy `/backend` to **Azure App Service (Linux, Python 3.11)**.
-   - Set Startup Command: `cd backend && uvicorn main:app --host 0.0.0.0 --port 8000`
-   - Set Environment Variables: `WEBSITES_PORT=8000`, `SECRET_KEY=your_secret_key`
+- **EC2 + Docker Compose**: Launch an Ubuntu EC2 instance, clone the repository, and run `docker compose up -d`.
+- **Managed Containers**: Deploy container images via **Amazon ECR** to **AWS App Runner** or **ECS Fargate**.
+- **Static Hosting**: Deploy frontend to **AWS Amplify** or **Amazon S3 + CloudFront**.
 
-### Option B: Automated Script (PowerShell)
-```powershell
-.\deploy_azure.ps1
-```
+See the step-by-step instructions in [AWS_DEPLOYMENT_GUIDE.md](AWS_DEPLOYMENT_GUIDE.md).
 
 ---
 
